@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pen</title>
+  </head>
+  <body>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedAssist AI Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🏥 MedAssist AI Pro</h1>
+    <p>AI Healthcare Assistant</p>
+</header>
+
+<div class="container">
+
+    <!-- Patient Details -->
+    <div class="card">
+
+        <h2>Patient Details</h2>
+
+        <label>Patient Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label>Age</label>
+        <input type="number" id="age" placeholder="Enter age">
+
+        <label>Gender</label>
+        <select id="gender">
+            <option value="">Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
+
+        <label>State</label>
+        <select id="state">
+            <option value="">Select State</option>
+            <option>Tamil Nadu</option>
+        </select>
+
+        <label>District</label>
+        <select id="district">
+            <option value="">Select District</option>
+            <option>Chennai</option>
+            <option>Coimbatore</option>
+            <option>Madurai</option>
+            <option>Salem</option>
+            <option>Trichy</option>
+        </select>
+
+        <label>Symptoms</label>
+        <textarea
+            id="symptoms"
+            rows="5"
+            placeholder="Example: Fever, cough, headache"></textarea>
+
+        <button onclick="analyzePatient()">
+            Analyze Patient
+        </button>
+
+        <button onclick="showHistory()">
+            View Patient History
+        </button>
+
+    </div>
+
+    <!-- Result -->
+
+    <div class="card">
+
+        <h2>Analysis Result</h2>
+
+        <p>
+            <strong>Disease:</strong>
+            <span id="disease">-</span>
+        </p>
+
+        <p>
+            <strong>Severity:</strong>
+            <span id="severity">-</span>
+        </p>
+
+        <p>
+            <strong>Advice:</strong>
+            <span id="advice">-</span>
+        </p>
+
+        <h3>Nearby Hospitals</h3>
+
+        <ul id="hospitalList">
+
+        </ul>
+
+    </div>
+
+    <!-- Patient History -->
+
+    <div class="card">
+
+        <h2>Saved Patient Records</h2>
+
+        <div id="history">
+
+            No records available.
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
